@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;900&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.25 rem;
+  font-weight: 300;
+  color: white;
+  margin: 0;
+}
+
+h1 + p {
+  color: #f18119;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.3125 rem;
+  margin: 0;
+}
+
+.top-text {
+  font-size: 0.625rem;
+  color: #f18119;
+  text-transform: uppercase;
+  border-top: 5px solid #f18119;
+  border-image: linear-gradient(45deg, #ffa51d, #ff713b) 1;
+  order: -1;
+  margin-top: 0;
+}
+
+strong {
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 1.3125 rem;
+  color: #404040;
+  margin: 0;
+}
+
+h2 + p {
+  font-weight: 900;
+  color: #f18119;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.fine-print {
+  font-size: 0.625rem;
+  letter-spacing: 1px;
+}
+
+.content p {
+  letter-spacing: 1px;
+  width: 75%;
+}
+
+/*Layout*/
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: #404040;
+  background-image: url(images/ribs.jpg);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  padding: 0 0.5em 2em;
+
+  min-height: 50vh;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 1em;
+}
+
+.introduction *,
+.content * {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  max-width: 200px;
+  gap: 0.75em;
+  margin: 2em 0;
+  font-family: inherit;
+}
+
+form input,
+.register {
+  border-radius: 5px;
+  padding: 0.8em;
+  transform: scale(1);
+}
+
+form input {
+  color: #989898;
+  text-align: inherit;
+  width: 100%;
+  border: 1px solid #404040;
+  transition: transform 200ms;
+}
+
+.register {
+  background-image: linear-gradient(45deg, #ffa51d, #ff713b);
+  border: none;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: inherit;
+  letter-spacing: 2px;
+  font-weight: 900;
+  width: 100%;
+  transition: transform 250ms;
+}
+
+.register:hover,
+.register:focus {
+  transform: scale(1.1);
+}
+
+form input:focus {
+  transform: scale(1.1);
+}
+
+/*Media Queries*/
+@media (min-width: 600px) {
+  body {
+    font-size: 1.125rem;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .top-text {
+    font-size: 0.8rem;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2,
+  h1 + p {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .fine-print {
+    font-size: 0.7rem;
+  }
+}
